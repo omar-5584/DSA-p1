@@ -9,7 +9,7 @@ public class Database {
 
 
     public Database() {
-        Map<String, Object> configs = PropertiesConfigManager.getInstance().getConfigurations("Database");
+        Map<String, Object> configs = ConfigManager.getInstance().getConfigurations("Database",ConfgType.Properties);
         this.url = (String) configs.getOrDefault("database.url", "jdbc:default:url");
         this.username = (String) configs.getOrDefault("database.username", "default_user");
         this.password = (String) configs.getOrDefault("database.password", "default_password");

@@ -1,0 +1,3 @@
+public enum ConfgType {
+    Properties,
+}
